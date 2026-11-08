@@ -4,7 +4,7 @@
 
 Askema turns a plain-language description of your app into a database schema. It doesn't guess at what you left unclear. It asks the questions an experienced database designer would ask, then proves the schema works before handing it to you.
 
-> Status: **idea stage**. There's no code yet. The idea, the research and the planned architecture are in [docs/idea.md](docs/idea.md).
+> Status: **idea stage**. There's no code yet. The idea, the research and the planned architecture are in [docs/idea.md](docs/idea.md). Plans are in [TODO.md](TODO.md).
 
 ## What makes it different
 
