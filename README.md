@@ -31,7 +31,26 @@ prompt ─► LLM asks questions ─► LLM returns the schema as JSON
                  ER diagram · SQL · migrations · decision notes
 ```
 
-There's no custom-trained model. Askema uses an existing LLM through its API. The work is in the rules, the checker, the test queries and the evals that sit around it.
+There's no custom-trained model. By default Askema runs a free, open model on your own computer through [Ollama](https://ollama.com), so it costs nothing and your app ideas never leave your machine. If you have a Claude API key, you can use Claude instead. The work is in the rules, the checker, the test queries and the evals that sit around it.
+
+## Running it yourself (planned)
+
+Askema is meant to be cloned and run locally. Once v1 exists, setup will look like this:
+
+```bash
+# 1. Install Ollama from https://ollama.com and download a model
+ollama pull gpt-oss:20b
+
+# 2. Get Askema
+git clone https://github.com/yuadhistrahangsubba/askema.git
+cd askema
+pnpm install
+
+# 3. Start it, then open http://localhost:3000
+pnpm dev
+```
+
+To use Claude instead, copy `.env.example` to `.env` and set `AI_PROVIDER=anthropic` and `ANTHROPIC_API_KEY`.
 
 ## Contributing
 
