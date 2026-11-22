@@ -7,7 +7,7 @@ Future plans for Askema, roughly in order. The reasoning behind them is in [docs
 - [ ] Pick the first audience: developers starting a new app, non-technical businesses, teams with an existing database, or one sector or country
 - [x] Web app, CLI, or both? **Web app that people clone and run locally**
 - [x] Open-source core with a hosted version, or fully open source? **Fully open source, run on your own computer**
-- [ ] Add a license (MIT?). Needed before anyone else can legally use the code
+- [x] Add a license: **MIT**
 - [ ] Confirm what competitors can do today (database.build, ChartDB, Liam DB) from their own docs
 
 ## Phase 1: smallest working version
