@@ -12,7 +12,7 @@ _Status: in progress. Written one section at a time, each approved before the ne
 | Where the loop runs | On the server, in one API route (approach A) | One place to test and debug; the checker and sandbox can move to the browser later |
 | Database engine | Postgres only | PGlite is Postgres; one dialect keeps v1 small |
 | AI provider setting | `AI_PROVIDER=ollama` (default) or `anthropic`, plus `AI_MODEL` | One small interface for both, so the rest of the code never knows which model it is talking to |
-| License | MIT (to confirm) | Lets anyone use, change and share Askema, including at work |
+| License | MIT | Lets anyone use, change and share Askema, including at work |
 
 ## 1. Scope
 
