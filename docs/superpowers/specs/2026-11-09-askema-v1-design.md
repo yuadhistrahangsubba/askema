@@ -6,11 +6,13 @@ _Status: in progress. Written one section at a time, each approved before the ne
 
 | Decision | Choice | Why |
 |---|---|---|
-| Form | Web app | Best way to show the idea to people |
+| Form | Open-source web app that people clone and run on their own computer (`pnpm install`, `pnpm dev`) | Free for everyone, nothing to host, and anyone can read and change the code |
 | Stack | Next.js (App Router), TypeScript, Tailwind, shadcn/ui, zod, vitest, pnpm | Same stack as the author's other projects |
-| AI | Claude API, using the server's key from `.env` | Simplest setup; visitors never see the key |
+| AI | A free open model running locally through [Ollama](https://ollama.com) by default; Claude as an option for people who add their own key to `.env` | Costs nobody anything, works offline, and descriptions of people's apps never leave their computer |
 | Where the loop runs | On the server, in one API route (approach A) | One place to test and debug; the checker and sandbox can move to the browser later |
 | Database engine | Postgres only | PGlite is Postgres; one dialect keeps v1 small |
+| AI provider setting | `AI_PROVIDER=ollama` (default) or `anthropic`, plus `AI_MODEL` | One small interface for both, so the rest of the code never knows which model it is talking to |
+| License | MIT (to confirm) | Lets anyone use, change and share Askema, including at work |
 
 ## 1. Scope
 
@@ -38,4 +40,4 @@ _Status: in progress. Written one section at a time, each approved before the ne
 - an interactive diagram (React Flow) or a Postgres playground in the browser
 - accounts, or saving past sessions (a session lives only in the open page)
 - changing an existing database, importing spreadsheets, other database engines
-- a rate limit. **Required before any public deploy**, because the server key pays for every request.
+- a hosted public version. Askema runs on each person's own computer, so there is no shared key to protect. If a hosted version is ever added, it needs a rate limit first.
